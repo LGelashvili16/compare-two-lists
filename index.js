@@ -33,10 +33,16 @@ btn1.addEventListener('click', () => {
   removebtn.classList.add('remove-1');
   removebtn.setAttribute('data-id-remove', `${list1.childElementCount + 1}`);
   removebtn.textContent = 'Remove';
+
+  const p = document.createElement('p');
+  p.classList.add('value-text-1');
+  p.textContent = input1.value;
+
   const li = document.createElement('li');
   li.classList.add('li-1');
   li.setAttribute('data-id-li1', `${list1.childElementCount + 1}`);
-  li.textContent = input1.value;
+
+  li.appendChild(p);
   li.appendChild(removebtn);
   list1.appendChild(li);
 
@@ -103,10 +109,16 @@ btn2.addEventListener('click', () => {
   removebtn.classList.add('remove-2');
   removebtn.setAttribute('data-id-remove', `${list2.childElementCount + 1}`);
   removebtn.textContent = 'Remove';
+
+  const p = document.createElement('p');
+  p.classList.add('value-text-2');
+  p.textContent = input2.value;
+
   const li = document.createElement('li');
   li.classList.add('li-2');
   li.setAttribute('data-id-li2', `${list2.childElementCount + 1}`);
-  li.textContent = input2.value;
+
+  li.appendChild(p);
   li.appendChild(removebtn);
   list2.appendChild(li);
 
